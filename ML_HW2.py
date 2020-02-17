@@ -1,15 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[135]:
 
 
 import cvxpy as cp
 import numpy as np
-
-
-# In[198]:
-
 
 ## Load and split data
 print('Q4:\nLoad and split data...')
@@ -81,8 +76,6 @@ mae = sum([abs(j-i) for i,j in zip(prediction,testing_Y)])/len(testing_Y)
 print('  Testing MAE is ', mae)
 
 
-# In[199]:
-
 
 ## Load and split data
 print('Q5:\nLoad and split data...')
@@ -152,10 +145,6 @@ print('  Training accuracy is ', accuracy)
 prediction = [1 if sum(i)+ b > 0 else -1 for i in testing_X*w.value]
 accuracy = sum([1 if i == j else 0 for i,j in zip(prediction,testing_Y)])/len(testing_Y)
 print('  Testing accuracy is ', accuracy)
-
-
-# In[ ]:
-
 
 
 
